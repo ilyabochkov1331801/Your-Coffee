@@ -25,12 +25,16 @@ class MainScreenViewController: UIViewController {
         coffeeListTableView.dataSource = self
         
         coffeeListTableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        coffeeListTableView.rowHeight = 120
+        coffeeListTableView.rowHeight = 100
         
         presenter?.updateTodayCoffeeList()
         
         navigationController?.isNavigationBarHidden = true
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func addNewCoffeeButtonTapped(_ sender: UIButton) {
+        presenter?.addNewCoffee()
     }
 }
 

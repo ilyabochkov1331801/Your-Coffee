@@ -11,7 +11,7 @@ import Foundation
 class FlatWhite: Coffee {
     var name: String = "Флэт Уайт"
     var description: String = "Кофейный напиток родом из Австралии, придуманный в 1980-х годах. Готовится путём добавления нагретого паром молока с небольшим количеством пены (0,5 см) в двойную порцию эспрессо."
-    var imageName: String = "flatWhite"
+    var imageName: String = "Флэт Уайт"
     
     var volume: Int
     var base: CoffeeBase

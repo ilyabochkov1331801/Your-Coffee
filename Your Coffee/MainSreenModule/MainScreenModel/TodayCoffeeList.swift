@@ -11,15 +11,12 @@ import Foundation
 class TodayCoffeeListStorage {
     private let maxCaffeine = 4.0
     
-    var todayCoffeeList: Array<Coffee> {
-        didSet {
-            calculateCaffeinePercentage()
-        }
-    }
+    var todayCoffeeList: Array<Coffee>
     var caffeinePercentage: Double?
     
     init(with newTodayCoffeeList: Array<Coffee>) {
         todayCoffeeList = newTodayCoffeeList
+        calculateCaffeinePercentage()
     }
     
     private func calculateCaffeinePercentage() {
@@ -27,9 +24,9 @@ class TodayCoffeeListStorage {
         todayCoffeeList.forEach {
             (coffee) in
             switch coffee.base {
-            case is Espresso:
+            case is EspressoBase:
                 caffeine += 1.0
-            case is DoubleEspresso:
+            case is DoubleEspressoBase:
                 caffeine += 2.0
             default:
                 break

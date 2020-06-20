@@ -10,4 +10,5 @@ import Foundation
 
 protocol StorageServiceProtocol {
     func todayCoffeeList(completion: @escaping (Result<Array<Coffee>, Error>) -> ())
+    func addNewCoffee(type: CoffeeType, beans: CoffeeBeans, size: Size, completion: @escaping (Result<Coffee, Error>) -> ())
 }

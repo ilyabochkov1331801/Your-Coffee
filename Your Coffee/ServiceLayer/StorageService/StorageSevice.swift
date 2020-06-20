@@ -51,4 +51,26 @@ class StorageService: StorageServiceProtocol {
             }
         }
     }
+    
+    func addNewCoffee(type: CoffeeType, beans: CoffeeBeans, size: Size, completion: @escaping (Result<Coffee, Error>) -> ()) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let coffeeModel = CoffeeModel(context: self.context)
+            coffeeModel.beans = beans.rawValue
+            coffeeModel.date = Date()
+            coffeeModel.volume = Int16(size.rawValue)
+            coffeeModel.type = type.rawValue
+            do {
+                try self.context.save()
+                DispatchQueue.main.async {
+                    completion(.success(CoffeeFactory.coffee(with: type,
+                                                             size: size,
+                                                             beans: beans)))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
 }

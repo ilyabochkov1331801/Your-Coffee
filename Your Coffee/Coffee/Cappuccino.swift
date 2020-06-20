@@ -12,7 +12,7 @@ class Cappuccino: Coffee {
 
     var name: String = "Капучино"
     var description: String = "Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока"
-    var imageName: String = "cappuccino"
+    var imageName: String = "Капучино"
     
     var volume: Int
     var base: CoffeeBase

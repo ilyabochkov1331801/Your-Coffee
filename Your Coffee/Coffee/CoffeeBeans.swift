@@ -12,5 +12,4 @@ enum CoffeeBeans: String {
     case arabica = "arabica"
     case robusta = "robusta"
     case liberica = "liberica"
-    case excelsa = "excelsa"
 }

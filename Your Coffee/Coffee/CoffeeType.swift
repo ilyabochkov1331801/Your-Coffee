@@ -9,13 +9,13 @@
 import Foundation
 
 enum CoffeeType: String {    
-    case latte = "latte"
-    case cappuccino = "cappuccino"
-    case flatWhite = "flatWhite"
-    case espresso = "espresso"
-    case doubleEspresso = "doubleEspresso"
-    case americano = "americano"
-    case raf = "raf"
+    case latte = "Латте"
+    case cappuccino = "Капучино"
+    case flatWhite = "Флэт Уайт"
+    case espresso = "Эспрессо"
+    case doubleEspresso = "Двойной эспрессо"
+    case americano = "Американо"
+    case raf = "Раф"
 }
 
 extension CoffeeType: CaseIterable {}

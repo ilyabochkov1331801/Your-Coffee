@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewCoffeeScreenViewController" customModule="Your_Coffee" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="at1-HW-cf7" id="SK9-fP-I3P"/>
+                <outlet property="beansSegmentedControl" destination="7jk-L8-QLB" id="7pF-MP-kFw"/>
+                <outlet property="coffeeTypesCollectionView" destination="a3F-x3-Gbh" id="j17-sS-H4o"/>
+                <outlet property="sizeSegmentedControl" destination="rcS-LL-kj0" id="5As-Zs-yWV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a3F-x3-Gbh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="717"/>
+                    <color key="backgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a8l-X0-6iP">
+                        <size key="itemSize" width="150" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qb8-UU-2hz"/>
+                        <outlet property="delegate" destination="-1" id="c1r-4b-VwB"/>
+                    </connections>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="W9Z-wy-Yfk">
+                    <rect key="frame" x="20.5" y="781" width="373" height="83"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7jk-L8-QLB">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="32"/>
+                            <segments>
+                                <segment title="Арабика"/>
+                                <segment title="Робуста"/>
+                                <segment title="Либерика"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" red="0.47288328410000002" green="0.3544499874" blue="0.25880247350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="coffeeBeansSegmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="Wun-rL-C8k"/>
+                            </connections>
+                        </segmentedControl>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-LL-kj0">
+                            <rect key="frame" x="0.0" y="52" width="373" height="32"/>
+                            <segments>
+                                <segment title="S"/>
+                                <segment title="M"/>
+                                <segment title="L"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" red="0.47288328410000002" green="0.3544499874" blue="0.25880247350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="sizeSegmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="4CK-IM-CnK"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at1-HW-cf7">
+                    <rect key="frame" x="294" y="641" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="9kF-MK-XHh"/>
+                        <constraint firstAttribute="width" constant="100" id="iU0-Ng-ZMO"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Add Coffee Button"/>
+                    <connections>
+                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="KmD-DJ-KjZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="at1-HW-cf7" firstAttribute="bottom" secondItem="a3F-x3-Gbh" secondAttribute="bottom" constant="-20" id="DDb-n2-ccd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a3F-x3-Gbh" secondAttribute="trailing" id="GLf-oo-Wtk"/>
+                <constraint firstItem="a3F-x3-Gbh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="ID6-gn-Wgn"/>
+                <constraint firstItem="W9Z-wy-Yfk" firstAttribute="top" secondItem="a3F-x3-Gbh" secondAttribute="bottom" constant="20" id="WVb-Vm-9GO"/>
+                <constraint firstItem="W9Z-wy-Yfk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="YFc-vq-9cy"/>
+                <constraint firstItem="a3F-x3-Gbh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fgR-sY-2eu"/>
+                <constraint firstItem="a3F-x3-Gbh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gZE-RP-wgf"/>
+                <constraint firstItem="at1-HW-cf7" firstAttribute="trailing" secondItem="a3F-x3-Gbh" secondAttribute="trailing" constant="-20" id="mrJ-0Y-BsW"/>
+                <constraint firstItem="W9Z-wy-Yfk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="zRV-2s-Blh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Add Coffee Button" width="100" height="100"/>
+    </resources>
+</document>

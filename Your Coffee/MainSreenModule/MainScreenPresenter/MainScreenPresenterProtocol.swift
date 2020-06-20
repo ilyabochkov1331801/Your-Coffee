@@ -16,4 +16,5 @@ protocol MainScreenPresenterProtocol: class {
     init(view: MainScreenViewProtocol, storageService: StorageServiceProtocol, router: RouterProtocol)
     
     func updateTodayCoffeeList()
+    func addNewCoffee()
 }

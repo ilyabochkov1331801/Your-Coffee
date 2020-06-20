@@ -11,7 +11,7 @@ import Foundation
 class Espresso: Coffee {
     var name: String = "Эспрессо"
     var description: String = "Метод приготовления кофе путём прохождения горячей воды (около 90 °C) под давлением 9 бар через фильтр с молотым кофе"
-    var imageName: String = "espresso"
+    var imageName: String = "Эспрессо"
     
     var volume: Int
     var base: CoffeeBase

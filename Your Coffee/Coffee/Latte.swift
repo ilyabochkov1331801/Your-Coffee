@@ -12,7 +12,7 @@ class Latte: Coffee {
 
     var name: String = "Латте"
     var description: String = "Кофейный напиток родом из Италии, состоящий из молока и кофе эспрессо. Варится на основе молока, образуя в чашке или бокале трёхслойную смесь из кофе, молока и пены"
-    var imageName: String = "latte"
+    var imageName: String = "Латте"
 
     var base: CoffeeBase
     var volume: Int

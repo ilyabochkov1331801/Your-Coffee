@@ -14,4 +14,6 @@ protocol RouterProtocol {
     init(navigationController: UINavigationController, screenModuleBuilder: ScreenModuleBuilderProtocol)
     
     func showMainScreen()
+    func showNewCoffeeScreen()
+    func popToRoot()
 }

@@ -11,7 +11,7 @@ import Foundation
 class DoubleEspresso: Coffee {
     var name: String = "Двойной эспрессо"
     var description: String = "Представляет из себя двойную порцию эспрессо"
-    var imageName: String = "doubleEspresso"
+    var imageName: String = "Двойной эспрессо"
     
     var volume: Int
     var base: CoffeeBase

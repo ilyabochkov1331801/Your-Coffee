@@ -24,4 +24,16 @@ class Router: RouterProtocol {
         }
         navigationController.viewControllers = [ mainScreen ]
     }
+    
+    func showNewCoffeeScreen() {
+        guard let navigationController = navigationController,
+            let newCoffeeScreen = screenModuleBuilder?.newCoffeeScreen(router: self) else {
+            return
+        }
+        navigationController.pushViewController(newCoffeeScreen, animated: true)
+    }
+    
+    func popToRoot() {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

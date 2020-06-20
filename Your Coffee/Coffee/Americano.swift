@@ -11,7 +11,7 @@ import Foundation
 class Americano: Coffee {
     var name: String = "Американо"
     var description: String = "Способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо"
-    var imageName: String = "americano"
+    var imageName: String = "Американо"
     
     var volume: Int
     var base: CoffeeBase

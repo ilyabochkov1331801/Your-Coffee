@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainViewPresenter: MainScreenPresenterProtocol {
+class MainScreenPresenter: MainScreenPresenterProtocol {
     
     var router: RouterProtocol
     var storageService: StorageServiceProtocol
@@ -33,5 +33,9 @@ class MainViewPresenter: MainScreenPresenterProtocol {
                 self.view?.todayCoffeeListUpdatingFinished(with: error)
             }
         }
+    }
+    
+    func addNewCoffee() {
+        router.showNewCoffeeScreen()
     }
 }
