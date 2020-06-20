@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CoffeeFactory {
+class CoffeeFactory: CoffeeFactoryProtocol {
     static func coffee(with type: CoffeeType, size: Size, beans: CoffeeBeans) -> Coffee {
         return CoffeeFactory.coffee(with: type, volume: size.rawValue, beans: beans)
     }
