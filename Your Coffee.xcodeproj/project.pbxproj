@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA12C9A6249BBAAA00C57A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12C9A5249BBAAA00C57A5D /* AppDelegate.swift */; };
-		EA12C9A8249BBAAA00C57A5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12C9A7249BBAAA00C57A5D /* SceneDelegate.swift */; };
-		EA12C9AA249BBAAA00C57A5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12C9A9249BBAAA00C57A5D /* ViewController.swift */; };
-		EA12C9AD249BBAAA00C57A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA12C9AB249BBAAA00C57A5D /* Main.storyboard */; };
 		EA12C9B0249BBAAA00C57A5D /* Your_Coffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA12C9AE249BBAAA00C57A5D /* Your_Coffee.xcdatamodeld */; };
 		EA12C9B2249BBAAC00C57A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA12C9B1249BBAAC00C57A5D /* Assets.xcassets */; };
 		EA12C9B5249BBAAC00C57A5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA12C9B3249BBAAC00C57A5D /* LaunchScreen.storyboard */; };
@@ -48,14 +45,15 @@
 		EA12CA0B249E649E00C57A5D /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0A249E649E00C57A5D /* MainScreenPresenter.swift */; };
 		EA12CA0D249E651F00C57A5D /* StorageSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0C249E651F00C57A5D /* StorageSevice.swift */; };
 		EA12CA0F249E656800C57A5D /* ScreenModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0E249E656800C57A5D /* ScreenModuleBuilder.swift */; };
+		EA12CA11249E68D900C57A5D /* TodayCoffeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */; };
+		EA12CA14249E6D9900C57A5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA13249E6D9900C57A5D /* Router.swift */; };
+		EA12CA17249E791D00C57A5D /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA15249E791D00C57A5D /* CoffeeTableViewCell.swift */; };
+		EA12CA18249E791D00C57A5D /* CoffeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA12CA16249E791D00C57A5D /* CoffeeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA12C9A2249BBAAA00C57A5D /* Your Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA12C9A5249BBAAA00C57A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA12C9A7249BBAAA00C57A5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA12C9A9249BBAAA00C57A5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EA12C9AC249BBAAA00C57A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA12C9AF249BBAAA00C57A5D /* Your_Coffee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Your_Coffee.xcdatamodel; sourceTree = "<group>"; };
 		EA12C9B1249BBAAC00C57A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA12C9B4249BBAAC00C57A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +92,10 @@
 		EA12CA0A249E649E00C57A5D /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		EA12CA0C249E651F00C57A5D /* StorageSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSevice.swift; sourceTree = "<group>"; };
 		EA12CA0E249E656800C57A5D /* ScreenModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModuleBuilder.swift; sourceTree = "<group>"; };
+		EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoffeeList.swift; sourceTree = "<group>"; };
+		EA12CA13249E6D9900C57A5D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EA12CA15249E791D00C57A5D /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
+		EA12CA16249E791D00C57A5D /* CoffeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,15 +132,12 @@
 				EA12C9F2249E582400C57A5D /* ScreenModuleBuilder */,
 				EA12C9F3249E583C00C57A5D /* MainSreenModule */,
 				EA12CA06249E626600C57A5D /* ServiceLayer */,
+				EA12C9C6249C106D00C57A5D /* Coffee */,
 				EA12C9A5249BBAAA00C57A5D /* AppDelegate.swift */,
-				EA12C9A7249BBAAA00C57A5D /* SceneDelegate.swift */,
-				EA12C9A9249BBAAA00C57A5D /* ViewController.swift */,
-				EA12C9AB249BBAAA00C57A5D /* Main.storyboard */,
-				EA12C9B1249BBAAC00C57A5D /* Assets.xcassets */,
 				EA12C9B3249BBAAC00C57A5D /* LaunchScreen.storyboard */,
+				EA12C9B1249BBAAC00C57A5D /* Assets.xcassets */,
 				EA12C9B6249BBAAC00C57A5D /* Info.plist */,
 				EA12C9AE249BBAAA00C57A5D /* Your_Coffee.xcdatamodeld */,
-				EA12C9C6249C106D00C57A5D /* Coffee */,
 			);
 			path = "Your Coffee";
 			sourceTree = "<group>";
@@ -221,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				EA12C9F9249E5D1100C57A5D /* RouterProtocol.swift */,
+				EA12CA13249E6D9900C57A5D /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				EA12CA04249E61EF00C57A5D /* MainScreenViewProtocol.swift */,
-				EA12C9FE249E619F00C57A5D /* MainScreenViewController.swift */,
-				EA12C9FF249E619F00C57A5D /* MainScreenViewController.xib */,
+				EA12CA12249E68EE00C57A5D /* MainScreenViewController */,
+				EA12CA19249E792300C57A5D /* CoffeeTableViewCell */,
 			);
 			path = MainScreenView;
 			sourceTree = "<group>";
@@ -247,6 +247,7 @@
 		EA12C9FD249E5F7700C57A5D /* MainScreenModel */ = {
 			isa = PBXGroup;
 			children = (
+				EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */,
 			);
 			path = MainScreenModel;
 			sourceTree = "<group>";
@@ -266,6 +267,24 @@
 				EA12CA0C249E651F00C57A5D /* StorageSevice.swift */,
 			);
 			path = StorageService;
+			sourceTree = "<group>";
+		};
+		EA12CA12249E68EE00C57A5D /* MainScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA12C9FE249E619F00C57A5D /* MainScreenViewController.swift */,
+				EA12C9FF249E619F00C57A5D /* MainScreenViewController.xib */,
+			);
+			path = MainScreenViewController;
+			sourceTree = "<group>";
+		};
+		EA12CA19249E792300C57A5D /* CoffeeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA12CA15249E791D00C57A5D /* CoffeeTableViewCell.swift */,
+				EA12CA16249E791D00C57A5D /* CoffeeTableViewCell.xib */,
+			);
+			path = CoffeeTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +348,7 @@
 				EA12C9B5249BBAAC00C57A5D /* LaunchScreen.storyboard in Resources */,
 				EA12CA01249E619F00C57A5D /* MainScreenViewController.xib in Resources */,
 				EA12C9B2249BBAAC00C57A5D /* Assets.xcassets in Resources */,
-				EA12C9AD249BBAAA00C57A5D /* Main.storyboard in Resources */,
+				EA12CA18249E791D00C57A5D /* CoffeeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,13 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA12CA0F249E656800C57A5D /* ScreenModuleBuilder.swift in Sources */,
+				EA12CA11249E68D900C57A5D /* TodayCoffeeList.swift in Sources */,
 				EA12C9C3249C0C7900C57A5D /* Latte.swift in Sources */,
 				EA12CA03249E61CC00C57A5D /* MainScreenPresenterProtocol.swift in Sources */,
 				EA12CA0D249E651F00C57A5D /* StorageSevice.swift in Sources */,
 				EA12C9CF249C126100C57A5D /* CoffeeType.swift in Sources */,
 				EA12C9E9249E49B000C57A5D /* DoubleEspresso.swift in Sources */,
-				EA12C9AA249BBAAA00C57A5D /* ViewController.swift in Sources */,
 				EA12C9CB249C10E700C57A5D /* Сream.swift in Sources */,
+				EA12CA14249E6D9900C57A5D /* Router.swift in Sources */,
 				EA12C9C5249C0CCC00C57A5D /* Ingredient.swift in Sources */,
 				EA12C9EF249E4D6400C57A5D /* Sugar.swift in Sources */,
 				EA12C9D8249C14D800C57A5D /* FrothedMilk.swift in Sources */,
@@ -368,9 +388,9 @@
 				EA12C9CD249C110F00C57A5D /* Chocolate.swift in Sources */,
 				EA12CA00249E619F00C57A5D /* MainScreenViewController.swift in Sources */,
 				EA12C9BF249C081700C57A5D /* CoffeeBeans.swift in Sources */,
+				EA12CA17249E791D00C57A5D /* CoffeeTableViewCell.swift in Sources */,
 				EA12C9EB249E4B6900C57A5D /* Americano.swift in Sources */,
 				EA12C9F5249E5C5E00C57A5D /* ScreenModuleBuilderProtocol.swift in Sources */,
-				EA12C9A8249BBAAA00C57A5D /* SceneDelegate.swift in Sources */,
 				EA12C9D4249C144A00C57A5D /* Water.swift in Sources */,
 				EA12C9BD249C07BC00C57A5D /* Coffee.swift in Sources */,
 				EA12C9E1249E436E00C57A5D /* CoffeeBase.swift in Sources */,
@@ -383,14 +403,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EA12C9AB249BBAAA00C57A5D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA12C9AC249BBAAA00C57A5D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EA12C9B3249BBAAC00C57A5D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

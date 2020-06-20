@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StorageServiceProtocol {
-    
+    func todayCoffeeList(completion: @escaping (Result<Array<Coffee>, Error>) -> ())
 }

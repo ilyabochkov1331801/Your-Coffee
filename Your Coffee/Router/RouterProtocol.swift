@@ -9,6 +9,9 @@
 import UIKit
 
 protocol RouterProtocol {
-    var navigationController: UINavigationController? { get set }
-    var screenModuleBuilder: ScreenModuleBuilderProtocol? { get set}
+    var navigationController: UINavigationController? { get }
+    var screenModuleBuilder: ScreenModuleBuilderProtocol? { get }
+    init(navigationController: UINavigationController, screenModuleBuilder: ScreenModuleBuilderProtocol)
+    
+    func showMainScreen()
 }

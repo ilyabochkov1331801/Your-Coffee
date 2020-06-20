@@ -10,4 +10,7 @@ import Foundation
 
 protocol MainScreenViewProtocol: class {
     var presenter: MainScreenPresenterProtocol? { get set }
+    
+    func successTodayCoffeeListUpdate()
+    func todayCoffeeListUpdatingFinished(with error: Error)
 }

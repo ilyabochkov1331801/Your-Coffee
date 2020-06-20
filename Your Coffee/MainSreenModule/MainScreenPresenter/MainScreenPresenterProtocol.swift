@@ -12,5 +12,8 @@ protocol MainScreenPresenterProtocol: class {
     var router: RouterProtocol { get }
     var storageService: StorageServiceProtocol { get }
     var view: MainScreenViewProtocol? { get }
+    var todayCoffeeListStorage: TodayCoffeeListStorage? { get }
     init(view: MainScreenViewProtocol, storageService: StorageServiceProtocol, router: RouterProtocol)
+    
+    func updateTodayCoffeeList()
 }
