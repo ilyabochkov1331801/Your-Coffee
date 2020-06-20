@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainScreenViewController" customModule="Your_Coffee" customModuleProvider="target">
             <connections>
+                <outlet property="caffeinePercentageIndicatorHeight" destination="lLe-1l-fWr" id="bNL-QZ-49Q"/>
                 <outlet property="coffeeListTableView" destination="i7r-b3-B8d" id="SUi-EZ-NSL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,14 +37,32 @@
                     </constraints>
                     <state key="normal" image="Add Coffee Button"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty Coffee Cup" translatesAutoresizingMaskIntoConstraints="NO" id="yHL-ES-EWl">
+                    <rect key="frame" x="132" y="59" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Rkj-bq-oub"/>
+                        <constraint firstAttribute="height" constant="150" id="q4f-dR-kps"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full Coffee Cup" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-Za-Za7">
+                    <rect key="frame" x="132" y="59" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Myc-Yd-Des"/>
+                        <constraint firstAttribute="height" constant="150" id="lLe-1l-fWr"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="Ysi-Za-Za7" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="2WO-v0-45w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BKG-eq-QWr" secondAttribute="trailing" constant="30" id="71H-dE-GeH"/>
+                <constraint firstItem="yHL-ES-EWl" firstAttribute="bottom" secondItem="Ysi-Za-Za7" secondAttribute="bottom" id="7BW-Af-ex1"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DFj-Bo-gHR"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="GAC-Qg-8hv"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VtY-sk-0wI"/>
+                <constraint firstItem="yHL-ES-EWl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="a2D-3O-seN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BKG-eq-QWr" secondAttribute="bottom" constant="30" id="poL-Oz-rv8"/>
+                <constraint firstItem="yHL-ES-EWl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qoE-Jb-kbm"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="yjN-ik-xHL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -52,5 +71,7 @@
     </objects>
     <resources>
         <image name="Add Coffee Button" width="100" height="100"/>
+        <image name="Empty Coffee Cup" width="150" height="150"/>
+        <image name="Full Coffee Cup" width="150" height="150"/>
     </resources>
 </document>

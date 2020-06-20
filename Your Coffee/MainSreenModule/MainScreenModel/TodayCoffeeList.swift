@@ -16,7 +16,7 @@ class TodayCoffeeListStorage {
             calculateCaffeinePercentage()
         }
     }
-    var caffeinePercentage: Int?
+    var caffeinePercentage: Double?
     
     init(with newTodayCoffeeList: Array<Coffee>) {
         todayCoffeeList = newTodayCoffeeList
@@ -35,6 +35,6 @@ class TodayCoffeeListStorage {
                 break
             }
         }
-        caffeinePercentage = Int( caffeine / maxCaffeine * 100 )
+        caffeinePercentage = min(caffeine / maxCaffeine, 1.0)
     }
 }

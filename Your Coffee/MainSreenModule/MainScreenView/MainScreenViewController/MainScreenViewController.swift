@@ -12,9 +12,11 @@ class MainScreenViewController: UIViewController {
     
     private let cellNibName = "CoffeeTableViewCell"
     private let cellIdentifier = "CoffeeCell"
+    private let caffeinePercentageIndicatorMaxHeight = 150.0
 
     var presenter: MainScreenPresenterProtocol?
     @IBOutlet weak var coffeeListTableView: UITableView!
+    @IBOutlet weak var caffeinePercentageIndicatorHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class MainScreenViewController: UIViewController {
         coffeeListTableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         coffeeListTableView.rowHeight = 120
         
+        presenter?.updateTodayCoffeeList()
+        
         navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
@@ -33,10 +37,12 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: MainScreenViewProtocol {
     func successTodayCoffeeListUpdate() {
-        
+        coffeeListTableView.reloadData()
+        caffeinePercentageIndicatorHeight.constant = CGFloat(caffeinePercentageIndicatorMaxHeight * (presenter?.todayCoffeeListStorage?.caffeinePercentage ?? 0.0))
     }
+    
     func todayCoffeeListUpdatingFinished(with error: Error) {
-        
+        configureAlert(with: error)
     }
 }
 
@@ -53,5 +59,14 @@ extension MainScreenViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CoffeeTableViewCell
         cell.configureCell(with: presenter?.todayCoffeeListStorage?.todayCoffeeList[indexPath.row])
         return cell
+    }
+}
+
+extension MainScreenViewController {
+    private func configureAlert(with error: Error) {
+        let errorAlert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let okErrorAlertAction = UIAlertAction(title: "OK", style: .default)
+        errorAlert.addAction(okErrorAlertAction)
+        present(errorAlert, animated: true)
     }
 }

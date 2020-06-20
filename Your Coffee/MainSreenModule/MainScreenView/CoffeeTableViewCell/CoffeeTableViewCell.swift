@@ -17,7 +17,7 @@ class CoffeeTableViewCell: UITableViewCell {
     private var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none
-        dateFormatter.timeStyle = .full
+        dateFormatter.timeStyle = .medium
         return dateFormatter
     }()
     
