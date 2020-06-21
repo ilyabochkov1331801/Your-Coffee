@@ -9,31 +9,35 @@
 import UIKit
 
 class Router: RouterProtocol {
-    var navigationController: UINavigationController?
+    var mainScreen: UIViewController?
+    var currentScreen: UIViewController?
     var screenModuleBuilder: ScreenModuleBuilderProtocol?
     
-    required init(navigationController: UINavigationController, screenModuleBuilder: ScreenModuleBuilderProtocol) {
-        self.navigationController = navigationController
+    required init( screenModuleBuilder: ScreenModuleBuilderProtocol) {
         self.screenModuleBuilder = screenModuleBuilder
     }
     
-    func showMainScreen() {
-        guard let navigationController = navigationController,
-            let mainScreen = screenModuleBuilder?.mainScreen(router: self) else {
-            return
-        }
-        navigationController.viewControllers = [ mainScreen ]
+    func initialMainScreen() {
+        mainScreen = screenModuleBuilder?.mainScreen(router: self)
+        currentScreen = mainScreen
     }
     
     func showNewCoffeeScreen() {
-        guard let navigationController = navigationController,
+        guard let mainScreen = mainScreen,
             let newCoffeeScreen = screenModuleBuilder?.newCoffeeScreen(router: self) else {
             return
         }
-        navigationController.pushViewController(newCoffeeScreen, animated: true)
+        mainScreen.present(newCoffeeScreen, animated: true)
+        self.currentScreen = newCoffeeScreen
     }
     
-    func popToRoot() {
-        navigationController?.popToRootViewController(animated: true)
+    func popToMainScreen(with newCoffee: Coffee) {
+        guard let currentScreen = currentScreen else {
+            return
+        }
+        currentScreen.dismiss(animated: true)
+        (mainScreen as! MainScreenViewProtocol).presenter?.todayCoffeeListStorage?.todayCoffeeList.append(newCoffee)
+        (mainScreen as! MainScreenViewProtocol).successTodayCoffeeListUpdate()
+        self.currentScreen = nil
     }
 }

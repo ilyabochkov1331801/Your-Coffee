@@ -9,6 +9,6 @@
 import Foundation
 
 protocol CoffeeFactoryProtocol {
-    static func coffee(with type: CoffeeType, size: Size, beans: CoffeeBeans) -> Coffee
-    static func coffee(with type: CoffeeType, volume: Int, beans: CoffeeBeans) -> Coffee
+    static func coffee(with type: CoffeeType, size: Size, beans: CoffeeBeans, date: Date) -> Coffee
+    static func coffee(with type: CoffeeType, volume: Int, beans: CoffeeBeans, date: Date) -> Coffee
 }

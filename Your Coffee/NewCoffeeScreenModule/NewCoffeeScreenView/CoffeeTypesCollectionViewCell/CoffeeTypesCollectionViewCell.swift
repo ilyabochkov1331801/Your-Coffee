@@ -17,6 +17,12 @@ class CoffeeTypesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        coffeeImageView.layer.cornerRadius = 20
+        coffeeImageView.layer.masksToBounds = true
+    }
+    
     func configureCell(with type: CoffeeType) {
         coffeeImageView.image = UIImage(named: type.rawValue)
         coffeeNameLabel.text = type.rawValue

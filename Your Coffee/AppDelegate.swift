@@ -16,10 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let router = Router(navigationController: UINavigationController(),
-                            screenModuleBuilder: ScreenModuleBuilder())
-        router.showMainScreen()
-        window?.rootViewController = router.navigationController
+        let router = Router(screenModuleBuilder: ScreenModuleBuilder())
+        router.initialMainScreen()
+        window?.rootViewController = router.mainScreen
         window?.makeKeyAndVisible()
         return true
     }

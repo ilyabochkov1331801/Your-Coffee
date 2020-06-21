@@ -11,7 +11,11 @@ import Foundation
 class TodayCoffeeListStorage {
     private let maxCaffeine = 4.0
     
-    var todayCoffeeList: Array<Coffee>
+    var todayCoffeeList: Array<Coffee> {
+        didSet {
+            calculateCaffeinePercentage()
+        }
+    }
     var caffeinePercentage: Double?
     
     init(with newTodayCoffeeList: Array<Coffee>) {

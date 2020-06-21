@@ -18,9 +18,9 @@ class DoubleEspresso: Coffee {
     var date: Date
     var ingredients: Array<Ingredient>
     
-    required init(volume: Int, beans: CoffeeBeans) {
+    required init(volume: Int, beans: CoffeeBeans, date: Date) {
         self.volume = volume
-        date = Date()
+        self.date = date
         base = DoubleEspressoBase(beans: beans)
         ingredients = [ ]
     }

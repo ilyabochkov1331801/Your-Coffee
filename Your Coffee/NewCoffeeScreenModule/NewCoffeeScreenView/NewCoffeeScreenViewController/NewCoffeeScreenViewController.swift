@@ -29,7 +29,6 @@ class NewCoffeeScreenViewController: UIViewController {
         
         presenter?.set(coffeeBeans: .arabica)
         presenter?.set(size: .small)
-        
     }
     
     @IBAction func addButtonTapped(_ sender: UIButton) {

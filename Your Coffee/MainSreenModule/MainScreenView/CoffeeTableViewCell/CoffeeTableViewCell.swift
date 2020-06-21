@@ -29,6 +29,12 @@ class CoffeeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        coffeeImageView.layer.cornerRadius = 10
+        coffeeImageView.layer.masksToBounds = true
+    }
+    
     func configureCell(with coffee: Coffee?) {
         guard let coffee = coffee else {
             return

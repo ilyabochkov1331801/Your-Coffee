@@ -24,6 +24,10 @@ class StorageService: StorageServiceProtocol {
         return (begin, end)
     }()
     
+//    lazy var calendar: Calendar = {
+//        let calendar = Calendar(identifier: .gregorian)
+//        calendar.locale = Locale(identifier: "ru_RU")
+//    }()
     
     func todayCoffeeList(completion: @escaping (Result<Array<Coffee>, Error>) -> ()) {
         let fetchRequest: NSFetchRequest<CoffeeModel> = NSFetchRequest(entityName: entityName)
@@ -37,9 +41,11 @@ class StorageService: StorageServiceProtocol {
                     let type = CoffeeType(rawValue: coffeeModel.type!)!
                     let volume = Int(coffeeModel.volume)
                     let beans = CoffeeBeans(rawValue: coffeeModel.beans!)!
+                    let date = coffeeModel.date!
                     return CoffeeFactory.coffee(with: type,
                                                 volume: volume,
-                                                beans: beans)
+                                                beans: beans,
+                                                date: date)
                 })
                 DispatchQueue.main.async {
                     completion(.success(todayCoffeeList))
@@ -56,7 +62,8 @@ class StorageService: StorageServiceProtocol {
         DispatchQueue.global(qos: .userInitiated).async {
             let coffeeModel = CoffeeModel(context: self.context)
             coffeeModel.beans = beans.rawValue
-            coffeeModel.date = Date()
+            let now = Date()
+            coffeeModel.date = now
             coffeeModel.volume = Int16(size.rawValue)
             coffeeModel.type = type.rawValue
             do {
@@ -64,7 +71,8 @@ class StorageService: StorageServiceProtocol {
                 DispatchQueue.main.async {
                     completion(.success(CoffeeFactory.coffee(with: type,
                                                              size: size,
-                                                             beans: beans)))
+                                                             beans: beans,
+                                                             date: now)))
                 }
             } catch {
                 DispatchQueue.main.async {

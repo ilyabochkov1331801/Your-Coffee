@@ -17,5 +17,5 @@ protocol Coffee {
     var base: CoffeeBase { get }
     var date: Date { get }
     var ingredients: Array<Ingredient> { get }
-    init(volume: Int, beans: CoffeeBeans)
+    init(volume: Int, beans: CoffeeBeans, date: Date)
 }

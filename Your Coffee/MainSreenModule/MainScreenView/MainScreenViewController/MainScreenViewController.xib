@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7r-b3-B8d">
-                    <rect key="frame" x="0.0" y="235" width="414" height="627"/>
+                    <rect key="frame" x="0.0" y="239" width="414" height="623"/>
                     <color key="backgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="sectionIndexBackgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="sectionIndexTrackingBackgroundColor" red="0.47288328410000002" green="0.3544499874" blue="0.25880247350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -48,10 +48,10 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full Coffee Cup" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-Za-Za7">
-                    <rect key="frame" x="132" y="59" width="150" height="150"/>
+                    <rect key="frame" x="132" y="209" width="150" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="Myc-Yd-Des"/>
-                        <constraint firstAttribute="height" constant="150" id="lLe-1l-fWr"/>
+                        <constraint firstAttribute="height" id="lLe-1l-fWr"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -64,9 +64,9 @@
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="GAC-Qg-8hv"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VtY-sk-0wI"/>
                 <constraint firstItem="yHL-ES-EWl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="a2D-3O-seN"/>
+                <constraint firstItem="i7r-b3-B8d" firstAttribute="top" secondItem="Ysi-Za-Za7" secondAttribute="bottom" constant="30" id="h6h-Vf-mfn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BKG-eq-QWr" secondAttribute="bottom" constant="30" id="poL-Oz-rv8"/>
                 <constraint firstItem="yHL-ES-EWl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qoE-Jb-kbm"/>
-                <constraint firstItem="i7r-b3-B8d" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="yjN-ik-xHL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="140.625"/>

@@ -15,6 +15,7 @@ class MainScreenViewController: UIViewController {
     private let caffeinePercentageIndicatorMaxHeight = 150.0
 
     var presenter: MainScreenPresenterProtocol?
+    
     @IBOutlet weak var coffeeListTableView: UITableView!
     @IBOutlet weak var caffeinePercentageIndicatorHeight: NSLayoutConstraint!
     
@@ -28,10 +29,7 @@ class MainScreenViewController: UIViewController {
         coffeeListTableView.rowHeight = 100
         
         presenter?.updateTodayCoffeeList()
-        
-        navigationController?.isNavigationBarHidden = true
     }
-    
     
     @IBAction func addNewCoffeeButtonTapped(_ sender: UIButton) {
         presenter?.addNewCoffee()
@@ -42,7 +40,10 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: MainScreenViewProtocol {
     func successTodayCoffeeListUpdate() {
         coffeeListTableView.reloadData()
-        caffeinePercentageIndicatorHeight.constant = CGFloat(caffeinePercentageIndicatorMaxHeight * (presenter?.todayCoffeeListStorage?.caffeinePercentage ?? 0.0))
+        UIView.animate(withDuration: 1) {
+            self.caffeinePercentageIndicatorHeight.constant = CGFloat(self.caffeinePercentageIndicatorMaxHeight * (self.presenter?.todayCoffeeListStorage?.caffeinePercentage ?? 0.0))
+            self.view.layoutIfNeeded()
+        }
     }
     
     func todayCoffeeListUpdatingFinished(with error: Error) {
@@ -51,7 +52,9 @@ extension MainScreenViewController: MainScreenViewProtocol {
 }
 
 extension MainScreenViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
 }
 
 extension MainScreenViewController: UITableViewDataSource {

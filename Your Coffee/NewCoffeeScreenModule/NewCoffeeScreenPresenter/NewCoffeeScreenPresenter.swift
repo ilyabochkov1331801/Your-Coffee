@@ -28,8 +28,8 @@ class NewCoffeeScreenPresenter: NewCoffeeScreenPresenterProtocol {
                                        [weak self] (result) in
                                         guard let self = self else { return }
                                         switch result {
-                                        case .success(let coffee):
-                                            self.router.popToRoot()
+                                        case .success(let newCoffee):
+                                            self.router.popToMainScreen(with: newCoffee)
                                         case .failure(let error):
                                             self.view?.addingNewCoffeeFinished(with: error)
                                         }
