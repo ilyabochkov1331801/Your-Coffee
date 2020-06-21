@@ -38,4 +38,9 @@ class MainScreenPresenter: MainScreenPresenterProtocol {
     func addNewCoffee() {
         router.showNewCoffeeScreen()
     }
+    
+    func append(newCoffee: Coffee) {
+        todayCoffeeListStorage?.append(newCoffee: newCoffee)
+        view?.successTodayCoffeeListUpdate()
+    }
 }

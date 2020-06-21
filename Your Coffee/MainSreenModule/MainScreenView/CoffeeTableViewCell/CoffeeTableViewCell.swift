@@ -33,6 +33,9 @@ class CoffeeTableViewCell: UITableViewCell {
         super.layoutSubviews()
         coffeeImageView.layer.cornerRadius = 10
         coffeeImageView.layer.masksToBounds = true
+        coffeeImageView.layer.borderWidth = 1
+        coffeeImageView.layer.borderColor = #colorLiteral(red: 0.4947935939, green: 0.3483881354, blue: 0.2426223457, alpha: 1)
+        contentView.layer.cornerRadius = 10
     }
     
     func configureCell(with coffee: Coffee?) {

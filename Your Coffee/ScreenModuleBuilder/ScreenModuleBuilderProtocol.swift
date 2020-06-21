@@ -11,4 +11,5 @@ import UIKit
 protocol ScreenModuleBuilderProtocol {
     func mainScreen(router: RouterProtocol) -> UIViewController
     func newCoffeeScreen(router: RouterProtocol) -> UIViewController
+    func detailScreen(with coffee: Coffee, router: RouterProtocol) -> UIViewController
 }

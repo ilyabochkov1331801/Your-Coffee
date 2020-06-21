@@ -28,4 +28,8 @@ class ScreenModuleBuilder: ScreenModuleBuilderProtocol {
         view.presenter = presenter
         return view
     }
+    
+    func detailScreen(with coffee: Coffee, router: RouterProtocol) -> UIViewController {
+        return UIViewController()
+    }
 }

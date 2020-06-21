@@ -16,5 +16,6 @@ protocol RouterProtocol {
     
     func initialMainScreen()
     func showNewCoffeeScreen()
+    func showDetailScreen(with coffee: Coffee)
     func popToMainScreen(with newCoffee: Coffee)
 }

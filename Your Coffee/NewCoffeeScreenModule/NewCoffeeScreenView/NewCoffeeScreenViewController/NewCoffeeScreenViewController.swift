@@ -31,6 +31,14 @@ class NewCoffeeScreenViewController: UIViewController {
         presenter?.set(size: .small)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sizeSegmentedControl.layer.borderWidth = 1
+        sizeSegmentedControl.layer.borderColor = #colorLiteral(red: 0.4947935939, green: 0.3483881354, blue: 0.2426223457, alpha: 1)
+        beansSegmentedControl.layer.borderWidth = 1
+        beansSegmentedControl.layer.borderColor = #colorLiteral(red: 0.4947935939, green: 0.3483881354, blue: 0.2426223457, alpha: 1)
+    }
+    
     @IBAction func addButtonTapped(_ sender: UIButton) {
         presenter?.addNewCoffee()
     }
@@ -88,11 +96,11 @@ extension NewCoffeeScreenViewController: UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.isHighlighted = true
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.4947935939, green: 0.3483881354, blue: 0.2426223457, alpha: 1)
         presenter?.set(coffeeType: CoffeeType.allCases[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.isHighlighted = false
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.6433308721, green: 0.4508948922, blue: 0.3193375468, alpha: 0.5)
     }
 }

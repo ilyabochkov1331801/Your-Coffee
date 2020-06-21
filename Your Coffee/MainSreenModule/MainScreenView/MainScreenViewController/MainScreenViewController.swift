@@ -26,7 +26,7 @@ class MainScreenViewController: UIViewController {
         coffeeListTableView.dataSource = self
         
         coffeeListTableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        coffeeListTableView.rowHeight = 100
+        coffeeListTableView.rowHeight = 120
         
         presenter?.updateTodayCoffeeList()
     }
@@ -39,10 +39,11 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: MainScreenViewProtocol {
     func successTodayCoffeeListUpdate() {
-        coffeeListTableView.reloadData()
+        self.coffeeListTableView.reloadData()
+        self.view.layer.layoutIfNeeded()
         UIView.animate(withDuration: 1) {
             self.caffeinePercentageIndicatorHeight.constant = CGFloat(self.caffeinePercentageIndicatorMaxHeight * (self.presenter?.todayCoffeeListStorage?.caffeinePercentage ?? 0.0))
-            self.view.layoutIfNeeded()
+            self.view.layer.layoutIfNeeded()
         }
     }
     

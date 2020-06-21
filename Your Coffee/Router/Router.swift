@@ -36,8 +36,11 @@ class Router: RouterProtocol {
             return
         }
         currentScreen.dismiss(animated: true)
-        (mainScreen as! MainScreenViewProtocol).presenter?.todayCoffeeListStorage?.todayCoffeeList.append(newCoffee)
-        (mainScreen as! MainScreenViewProtocol).successTodayCoffeeListUpdate()
+        (mainScreen as! MainScreenViewProtocol).presenter?.append(newCoffee: newCoffee)
         self.currentScreen = nil
+    }
+    
+    func showDetailScreen(with coffee: Coffee) {
+        
     }
 }

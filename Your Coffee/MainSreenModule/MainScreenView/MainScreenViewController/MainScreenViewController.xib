@@ -19,9 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7r-b3-B8d">
-                    <rect key="frame" x="0.0" y="239" width="414" height="623"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="i7r-b3-B8d">
+                    <rect key="frame" x="0.0" y="229" width="414" height="633"/>
                     <color key="backgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="separatorColor" red="0.47288328410000002" green="0.3544499874" blue="0.25880247350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <inset key="separatorInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                     <color key="sectionIndexBackgroundColor" red="0.731472075" green="0.67308515310000006" blue="0.50977432730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="sectionIndexTrackingBackgroundColor" red="0.47288328410000002" green="0.3544499874" blue="0.25880247350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <connections>
@@ -64,7 +66,7 @@
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="GAC-Qg-8hv"/>
                 <constraint firstItem="i7r-b3-B8d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VtY-sk-0wI"/>
                 <constraint firstItem="yHL-ES-EWl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="a2D-3O-seN"/>
-                <constraint firstItem="i7r-b3-B8d" firstAttribute="top" secondItem="Ysi-Za-Za7" secondAttribute="bottom" constant="30" id="h6h-Vf-mfn"/>
+                <constraint firstItem="i7r-b3-B8d" firstAttribute="top" secondItem="Ysi-Za-Za7" secondAttribute="bottom" constant="20" id="h6h-Vf-mfn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BKG-eq-QWr" secondAttribute="bottom" constant="30" id="poL-Oz-rv8"/>
                 <constraint firstItem="yHL-ES-EWl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qoE-Jb-kbm"/>
             </constraints>

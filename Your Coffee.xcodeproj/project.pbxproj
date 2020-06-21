@@ -45,7 +45,7 @@
 		EA12CA0B249E649E00C57A5D /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0A249E649E00C57A5D /* MainScreenPresenter.swift */; };
 		EA12CA0D249E651F00C57A5D /* StorageSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0C249E651F00C57A5D /* StorageSevice.swift */; };
 		EA12CA0F249E656800C57A5D /* ScreenModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA0E249E656800C57A5D /* ScreenModuleBuilder.swift */; };
-		EA12CA11249E68D900C57A5D /* TodayCoffeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */; };
+		EA12CA11249E68D900C57A5D /* TodayCoffeeListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA10249E68D900C57A5D /* TodayCoffeeListStorage.swift */; };
 		EA12CA14249E6D9900C57A5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA13249E6D9900C57A5D /* Router.swift */; };
 		EA12CA17249E791D00C57A5D /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA15249E791D00C57A5D /* CoffeeTableViewCell.swift */; };
 		EA12CA18249E791D00C57A5D /* CoffeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA12CA16249E791D00C57A5D /* CoffeeTableViewCell.xib */; };
@@ -57,6 +57,11 @@
 		EA12CA29249EA0FF00C57A5D /* NewCoffeeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA12CA27249EA0FF00C57A5D /* NewCoffeeScreenViewController.xib */; };
 		EA12CA2E249EABD600C57A5D /* CoffeeTypesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12CA2C249EABD600C57A5D /* CoffeeTypesCollectionViewCell.swift */; };
 		EA12CA2F249EABD600C57A5D /* CoffeeTypesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA12CA2D249EABD600C57A5D /* CoffeeTypesCollectionViewCell.xib */; };
+		EA6CD8F024A005250044EAE6 /* DetailScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CD8EF24A005250044EAE6 /* DetailScreenViewProtocol.swift */; };
+		EA6CD8F324A0053D0044EAE6 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CD8F124A0053D0044EAE6 /* DetailScreenViewController.swift */; };
+		EA6CD8F424A0053D0044EAE6 /* DetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6CD8F224A0053D0044EAE6 /* DetailScreenViewController.xib */; };
+		EA6CD8F724A005620044EAE6 /* DetailScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CD8F624A005620044EAE6 /* DetailScreenPresenterProtocol.swift */; };
+		EA6CD8F924A0056F0044EAE6 /* DetailScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CD8F824A0056F0044EAE6 /* DetailScreenPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +105,7 @@
 		EA12CA0A249E649E00C57A5D /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		EA12CA0C249E651F00C57A5D /* StorageSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSevice.swift; sourceTree = "<group>"; };
 		EA12CA0E249E656800C57A5D /* ScreenModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModuleBuilder.swift; sourceTree = "<group>"; };
-		EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoffeeList.swift; sourceTree = "<group>"; };
+		EA12CA10249E68D900C57A5D /* TodayCoffeeListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoffeeListStorage.swift; sourceTree = "<group>"; };
 		EA12CA13249E6D9900C57A5D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EA12CA15249E791D00C57A5D /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
 		EA12CA16249E791D00C57A5D /* CoffeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTableViewCell.xib; sourceTree = "<group>"; };
@@ -112,6 +117,11 @@
 		EA12CA27249EA0FF00C57A5D /* NewCoffeeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCoffeeScreenViewController.xib; sourceTree = "<group>"; };
 		EA12CA2C249EABD600C57A5D /* CoffeeTypesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTypesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA12CA2D249EABD600C57A5D /* CoffeeTypesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeTypesCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA6CD8EF24A005250044EAE6 /* DetailScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewProtocol.swift; sourceTree = "<group>"; };
+		EA6CD8F124A0053D0044EAE6 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewController.swift; sourceTree = "<group>"; };
+		EA6CD8F224A0053D0044EAE6 /* DetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenViewController.xib; sourceTree = "<group>"; };
+		EA6CD8F624A005620044EAE6 /* DetailScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenPresenterProtocol.swift; sourceTree = "<group>"; };
+		EA6CD8F824A0056F0044EAE6 /* DetailScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +154,12 @@
 		EA12C9A4249BBAAA00C57A5D /* Your Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				EA12CA1A249E914500C57A5D /* NewCoffeeScreenModule */,
 				EA12C9F8249E5CFF00C57A5D /* Router */,
 				EA12C9F2249E582400C57A5D /* ScreenModuleBuilder */,
+				EA6CD8EB249FF1C90044EAE6 /* DetailScreenModule */,
+				EA12CA1A249E914500C57A5D /* NewCoffeeScreenModule */,
 				EA12C9F3249E583C00C57A5D /* MainSreenModule */,
 				EA12CA06249E626600C57A5D /* ServiceLayer */,
-				EA12C9C6249C106D00C57A5D /* Coffee */,
 				EA12C9A5249BBAAA00C57A5D /* AppDelegate.swift */,
 				EA12C9B3249BBAAC00C57A5D /* LaunchScreen.storyboard */,
 				EA12C9B1249BBAAC00C57A5D /* Assets.xcassets */,
@@ -264,7 +274,7 @@
 		EA12C9FD249E5F7700C57A5D /* MainScreenModel */ = {
 			isa = PBXGroup;
 			children = (
-				EA12CA10249E68D900C57A5D /* TodayCoffeeList.swift */,
+				EA12CA10249E68D900C57A5D /* TodayCoffeeListStorage.swift */,
 			);
 			path = MainScreenModel;
 			sourceTree = "<group>";
@@ -359,6 +369,51 @@
 			path = CoffeeTypesCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		EA6CD8EB249FF1C90044EAE6 /* DetailScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				EA6CD8EE24A003420044EAE6 /* DetailScreenModel */,
+				EA6CD8ED24A003350044EAE6 /* DetailScreenView */,
+				EA6CD8EC24A0031D0044EAE6 /* DetailScreenPresener */,
+			);
+			path = DetailScreenModule;
+			sourceTree = "<group>";
+		};
+		EA6CD8EC24A0031D0044EAE6 /* DetailScreenPresener */ = {
+			isa = PBXGroup;
+			children = (
+				EA6CD8F624A005620044EAE6 /* DetailScreenPresenterProtocol.swift */,
+				EA6CD8F824A0056F0044EAE6 /* DetailScreenPresenter.swift */,
+			);
+			path = DetailScreenPresener;
+			sourceTree = "<group>";
+		};
+		EA6CD8ED24A003350044EAE6 /* DetailScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				EA6CD8EF24A005250044EAE6 /* DetailScreenViewProtocol.swift */,
+				EA6CD8F524A005450044EAE6 /* DetailScreenViewController */,
+			);
+			path = DetailScreenView;
+			sourceTree = "<group>";
+		};
+		EA6CD8EE24A003420044EAE6 /* DetailScreenModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA12C9C6249C106D00C57A5D /* Coffee */,
+			);
+			path = DetailScreenModel;
+			sourceTree = "<group>";
+		};
+		EA6CD8F524A005450044EAE6 /* DetailScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA6CD8F124A0053D0044EAE6 /* DetailScreenViewController.swift */,
+				EA6CD8F224A0053D0044EAE6 /* DetailScreenViewController.xib */,
+			);
+			path = DetailScreenViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,6 +476,7 @@
 				EA12C9B5249BBAAC00C57A5D /* LaunchScreen.storyboard in Resources */,
 				EA12CA01249E619F00C57A5D /* MainScreenViewController.xib in Resources */,
 				EA12CA29249EA0FF00C57A5D /* NewCoffeeScreenViewController.xib in Resources */,
+				EA6CD8F424A0053D0044EAE6 /* DetailScreenViewController.xib in Resources */,
 				EA12C9B2249BBAAC00C57A5D /* Assets.xcassets in Resources */,
 				EA12CA18249E791D00C57A5D /* CoffeeTableViewCell.xib in Resources */,
 			);
@@ -433,8 +489,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6CD8F324A0053D0044EAE6 /* DetailScreenViewController.swift in Sources */,
 				EA12CA0F249E656800C57A5D /* ScreenModuleBuilder.swift in Sources */,
-				EA12CA11249E68D900C57A5D /* TodayCoffeeList.swift in Sources */,
+				EA6CD8F024A005250044EAE6 /* DetailScreenViewProtocol.swift in Sources */,
+				EA12CA11249E68D900C57A5D /* TodayCoffeeListStorage.swift in Sources */,
 				EA12C9C3249C0C7900C57A5D /* Latte.swift in Sources */,
 				EA12CA03249E61CC00C57A5D /* MainScreenPresenterProtocol.swift in Sources */,
 				EA12CA0D249E651F00C57A5D /* StorageSevice.swift in Sources */,
@@ -453,6 +511,7 @@
 				EA12C9C1249C0B2E00C57A5D /* Size.swift in Sources */,
 				EA12C9C9249C10A400C57A5D /* Milk.swift in Sources */,
 				EA12C9DA249C177E00C57A5D /* Cappuccino.swift in Sources */,
+				EA6CD8F724A005620044EAE6 /* DetailScreenPresenterProtocol.swift in Sources */,
 				EA12C9FA249E5D1100C57A5D /* RouterProtocol.swift in Sources */,
 				EA12C9E5249E472500C57A5D /* DoubleEspressoBase.swift in Sources */,
 				EA12CA23249E9DFC00C57A5D /* NewCoffeeScreenPresenterProtocol.swift in Sources */,
@@ -463,6 +522,7 @@
 				EA12C9ED249E4CC000C57A5D /* Raf.swift in Sources */,
 				EA12C9F7249E5C7F00C57A5D /* CoffeeFactoryProtocol.swift in Sources */,
 				EA12C9B0249BBAAA00C57A5D /* Your_Coffee.xcdatamodeld in Sources */,
+				EA6CD8F924A0056F0044EAE6 /* DetailScreenPresenter.swift in Sources */,
 				EA12C9CD249C110F00C57A5D /* Chocolate.swift in Sources */,
 				EA12CA00249E619F00C57A5D /* MainScreenViewController.swift in Sources */,
 				EA12C9BF249C081700C57A5D /* CoffeeBeans.swift in Sources */,
