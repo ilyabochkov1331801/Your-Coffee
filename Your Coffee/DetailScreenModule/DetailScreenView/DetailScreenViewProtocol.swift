@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+protocol DetailScreenViewProtocol {
+    var presenter: DetailScreenPresenterProtocol? { get set }
+    
+    func set(coffeeImage withName: String)
+    func set(coffeeName: String)
+    func set(coffeeSize: Size)
+    func set(description: String)
+    func set(beans: String)
+    func set(time: String)
+}

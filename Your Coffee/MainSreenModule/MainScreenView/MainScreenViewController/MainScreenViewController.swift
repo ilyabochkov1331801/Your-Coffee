@@ -50,10 +50,16 @@ extension MainScreenViewController: MainScreenViewProtocol {
     func todayCoffeeListUpdatingFinished(with error: Error) {
         configureAlert(with: error)
     }
+    
+    func updateTitle(with newTitle: String) {
+        title = newTitle
+    }
 }
 
 extension MainScreenViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        presenter?.detailInfo(about: presenter?.todayCoffeeListStorage?.todayCoffeeList[indexPath.row])
         return false
     }
 }

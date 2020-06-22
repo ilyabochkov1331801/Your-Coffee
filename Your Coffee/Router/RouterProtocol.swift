@@ -9,13 +9,15 @@
 import UIKit
 
 protocol RouterProtocol {
+    var navigationController: UINavigationController? { get }
     var mainScreen: UIViewController? { get }
     var currentScreen: UIViewController? { get }
-    var screenModuleBuilder: ScreenModuleBuilderProtocol? { get }
+    var screenModuleBuilder: ScreenModuleBuilderProtocol { get }
     init(screenModuleBuilder: ScreenModuleBuilderProtocol)
     
     func initialMainScreen()
     func showNewCoffeeScreen()
     func showDetailScreen(with coffee: Coffee)
-    func popToMainScreen(with newCoffee: Coffee)
+    func dismissToMainScreen(with newCoffee: Coffee)
+    func popToMainScreen()
 }

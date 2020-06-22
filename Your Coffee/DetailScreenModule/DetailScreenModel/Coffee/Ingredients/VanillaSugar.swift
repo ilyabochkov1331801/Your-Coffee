@@ -10,4 +10,5 @@ import Foundation
 
 struct VanillaSugar: Ingredient {
     var name: String = "Ванильный сахар"
+    var imageName: String = "VanillaSugar"
 }

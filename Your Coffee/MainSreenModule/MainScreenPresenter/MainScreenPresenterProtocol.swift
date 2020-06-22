@@ -17,5 +17,7 @@ protocol MainScreenPresenterProtocol: class {
     
     func updateTodayCoffeeList()
     func addNewCoffee()
+    func detailInfo(about coffee: Coffee?)
+    
     func append(newCoffee: Coffee)
 }

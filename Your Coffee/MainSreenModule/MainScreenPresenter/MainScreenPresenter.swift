@@ -15,6 +15,13 @@ class MainScreenPresenter: MainScreenPresenterProtocol {
     weak var view: MainScreenViewProtocol?
     var todayCoffeeListStorage: TodayCoffeeListStorage?
     
+    private var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .none
+        return dateFormatter
+    }()
+    
     required init(view: MainScreenViewProtocol, storageService: StorageServiceProtocol, router: RouterProtocol) {
         self.router = router
         self.storageService = storageService
@@ -22,6 +29,7 @@ class MainScreenPresenter: MainScreenPresenterProtocol {
     }
     
     func updateTodayCoffeeList() {
+        view?.updateTitle(with: dateFormatter.string(from: Date()))
         storageService.todayCoffeeList {
             [weak self] (result) in
             guard let self = self else { return }
@@ -42,5 +50,12 @@ class MainScreenPresenter: MainScreenPresenterProtocol {
     func append(newCoffee: Coffee) {
         todayCoffeeListStorage?.append(newCoffee: newCoffee)
         view?.successTodayCoffeeListUpdate()
+    }
+    
+    func detailInfo(about coffee: Coffee?) {
+        guard let coffee = coffee else {
+            return
+        }
+        router.showDetailScreen(with: coffee)
     }
 }

@@ -29,7 +29,7 @@ class NewCoffeeScreenPresenter: NewCoffeeScreenPresenterProtocol {
                                         guard let self = self else { return }
                                         switch result {
                                         case .success(let newCoffee):
-                                            self.router.popToMainScreen(with: newCoffee)
+                                            self.router.dismissToMainScreen(with: newCoffee)
                                         case .failure(let error):
                                             self.view?.addingNewCoffeeFinished(with: error)
                                         }

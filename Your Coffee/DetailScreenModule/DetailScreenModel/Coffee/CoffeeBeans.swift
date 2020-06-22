@@ -9,7 +9,7 @@
 import Foundation
 
 enum CoffeeBeans: String {
-    case arabica = "arabica"
-    case robusta = "robusta"
-    case liberica = "liberica"
+    case arabica = "Арабика"
+    case robusta = "Робуста"
+    case liberica = "Либерика"
 }

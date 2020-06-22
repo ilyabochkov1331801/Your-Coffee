@@ -13,4 +13,5 @@ protocol MainScreenViewProtocol: class {
     
     func successTodayCoffeeListUpdate()
     func todayCoffeeListUpdatingFinished(with error: Error)
+    func updateTitle(with newTitle: String)
 }

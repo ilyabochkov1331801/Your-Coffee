@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol DetailScreenPresenterProtocol {
+    var view: DetailScreenViewProtocol? { get }
+    var coffeeInfo: Coffee { get }
+    var router: RouterProtocol { get }
+    init(view: DetailScreenViewProtocol, router: RouterProtocol, coffee: Coffee)
+    
+    func updateCoffeeInfo()
+}

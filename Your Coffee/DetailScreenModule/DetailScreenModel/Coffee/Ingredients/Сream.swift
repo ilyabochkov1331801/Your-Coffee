@@ -10,4 +10,5 @@ import Foundation
 
 struct Cream: Ingredient {
     var name: String = "Сливки"
+    var imageName: String = "Cream"
 }

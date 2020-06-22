@@ -10,4 +10,5 @@ import Foundation
 
 protocol Ingredient {
     var name: String { get }
+    var imageName: String { get }
 }
