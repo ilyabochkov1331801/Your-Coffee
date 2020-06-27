@@ -39,6 +39,7 @@ class NewCoffeeScreenViewController: UIViewController {
         beansSegmentedControl.layer.borderColor = #colorLiteral(red: 0.4947935939, green: 0.3483881354, blue: 0.2426223457, alpha: 1)
     }
     
+
     @IBAction func addButtonTapped(_ sender: UIButton) {
         presenter?.addNewCoffee()
     }
